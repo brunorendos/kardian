@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Presupuesto Renault Kardian</title>
+  <meta property="og:title" content="Presupuesto Renault Kardian" />
+  <meta property="og:description" content="75/25 financiado · Precancelable · Adjudica desde cuota 2" />
+  <meta property="og:image" content="https://cbredes.s3.us-east-2.amazonaws.com/webred/_red/_renault25/images/kardian/VE3KARDIAN.jpeg" />
+  <meta property="og:url" content="https://renault-kardian.vercel.app" />
+  <meta property="og:type" content="website" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+      box-sizing: border-box;
+      font-size: 18px;
+    }
+
+    .kw {
+      font-family: 'Barlow', sans-serif;
+      max-width: 480px;
+      width: 100%;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      color: #1a1a1a;
+      border: 1px solid #e0e0e0;
+      height: fit-content;
+    }
+
+    .kw-header {
+      background: #000000;
+      padding: 22px 24px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-bottom: 4px solid #FFCD11;
+    }
+
+    .kw-header img.logo {
+      height: 75px;
+      width: auto;
+      display: block;
+    }
+
+    .kw-divider {
+      width: 1px;
+      height: 38px;
+      background: #444;
+      flex-shrink: 0;
+    }
+
+    .kw-header-text h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 3px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .kw-header-text p {
+      font-size: 11px;
+      font-weight: 500;
+      color: #888;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .verified-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 7px;
+      background: #fff;
+      color: #000;
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .verified-badge svg {
+      width: 10px;
+      height: 10px;
+      flex-shrink: 0;
+    }
+
+    .kw-badges {
+      background: #f5f5f5;
+      padding: 10px 24px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .badge {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 4px 10px;
+      border-radius: 4px;
+      border: 1px solid #1a1a1a;
+      color: #1a1a1a;
+      background: transparent;
+    }
+
+    .badge.filled { background: #FFCD11; color: #000; border-color: #FFCD11; }
+
+    .kw-img {
+      background: #ffffff;
+      padding: 24px;
+      text-align: center;
+      border-bottom: 1px solid #ececec;
+    }
+
+    .kw-img img { max-width: 100%; max-height: 260px; object-fit: contain; }
+
+    .kw-section {
+      padding: 18px 24px;
+      border-bottom: 1px solid #ececec;
+    }
+
+    .sec-label {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      color: #999;
+      margin: 0 0 12px;
+    }
+
+    .sec-label.yellow {
+      color: #000;
+      background: #FFCD11;
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 4px;
+      margin-bottom: 14px;
+    }
+
+    .big-price {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      margin-bottom: 6px;
+    }
+
+    .big-price .cur { font-size: 22px; font-weight: 600; color: #1a1a1a; }
+    .big-price .amt {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #1a1a1a;
+      line-height: 1;
+    }
+    .big-price .per { font-size: 15px; color: #999; }
+
+    .sub { font-size: 16px; color: #333; margin: 0; }
+    .sub strong { color: #444; }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 7px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .row:last-of-type { border-bottom: none; }
+    .row .lbl { font-size: 17px; color: #222; }
+    .row .val { font-size: 18px; font-weight: 600; color: #1a1a1a; }
+
+    .val.promo-green {
+      background: #edf7ee;
+      border: 1px solid #4caf50;
+      color: #2e7d32;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .note { font-size: 13px; color: #555; margin-top: 8px; }
+
+    .bonus-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .bonus-item:last-of-type { border-bottom: none; }
+    .bonus-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #FFCD11;
+      flex-shrink: 0;
+    }
+    .bonus-item .text { font-size: 17px; color: #111; line-height: 1.4; }
+    .bonus-item .text strong { color: #2e7d32; font-weight: 700; }
+
+    .tags { display: flex; gap: 8px; flex-wrap: wrap; }
+
+    .tag {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 5px 12px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      color: #111;
+      background: #fafafa;
+    }
+
+    .tag.green {
+      background: #edf7ee;
+      border-color: #4caf50;
+      color: #2e7d32;
+    }
+
+    .kw-footer {
+      background: #f5f5f5;
+      padding: 18px 24px;
+      border-top: 1px solid #e8e8e8;
+    }
+
+    .kw-footer p {
+      font-size: 14px;
+      color: #444;
+      margin: 0 0 14px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .kw-footer a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #25D366;
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 13px 20px;
+      border-radius: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .wa-icon { width: 16px; height: 16px; fill: #fff; flex-shrink: 0; }
+  </style>
+</head>
+<body>
+
+<div class="kw">
+
+  <div class="kw-header">
+    <img class="logo" src="https://i.pinimg.com/1200x/91/f7/fa/91f7fad05f5b38ea00109e3ba8b34c12.jpg" alt="Renault" />
+    <div class="kw-divider"></div>
+    <div class="kw-header-text">
+      <h1>Nuevo Kardian</h1>
+      <p>75/25 financiado · Precancelable</p>
+      <span class="verified-badge">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" stroke="#29B6F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Asesor Oficial Verificado
+      </span>
+    </div>
+  </div>
+
+  <div class="kw-badges">
+    <span class="badge filled">Adjudica desde cuota 2</span>
+    <span class="badge" style="color:#999; border-color:#ccc;">120 c</span>
+  </div>
+
+  <div class="kw-img">
+    <img src="https://cbredes.s3.us-east-2.amazonaws.com/webred/_red/_renault25/images/kardian/VE3KARDIAN.jpeg" alt="Renault Kardian" />
+  </div>
+
+  <div class="kw-section">
+    <p class="sec-label yellow">Cuota mensual</p>
+    <div class="big-price">
+      <span class="cur">$</span>
+      <span class="amt">314.074</span>
+      <span class="per">/ mes</span>
+    </div>
+    <p class="sub">Precancelable a valor de cuota pura: <strong>$233.188</strong></p>
+  </div>
+
+  <div class="kw-section">
+    <p class="sec-label yellow">Inscripción</p>
+    <div class="row">
+      <span class="lbl">Promoción — por tiempo limitado</span>
+      <span class="val promo-green">$174.900</span>
+    </div>
+    <div class="row">
+      <span class="lbl">Precio normal</span>
+      <span class="val" style="text-decoration: line-through; color: #aaa;">$399.900</span>
+    </div>
+    <p class="note">* La inscripción nunca se junta con la primera cuota.</p>
+  </div>
+
+  <div class="kw-section">
+    <p class="sec-label yellow">Bonificaciones</p>
+    <div class="bonus-item">
+      <div class="bonus-dot"></div>
+      <div class="text"><strong>Voucher $1.000.000</strong> sujeto a stock</div>
+    </div>
+    <p class="note">Consulte condiciones con su vendedor.</p>
+  </div>
+
+  <div class="kw-section">
+    <p class="sec-label yellow">Incluido en el precio</p>
+    <div class="tags">
+      <span class="tag green">Flete incluido</span>
+      <span class="tag green">Patentamiento incluido</span>
+      <span class="tag green">Tomamos tu usado</span>
+    </div>
+    <p class="note" style="margin-top:10px;">Sistema "Llave x Llave" · Consultar condiciones y disponibilidad.</p>
+  </div>
+
+  <div class="kw-footer">
+    <p>Espero haber sido claro. Ante cualquier duda, podés escribirme directamente.</p>
+    <a href="https://wa.me/3412562099">
+      <svg class="wa-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      Contactarme por WhatsApp
+    </a>
+  </div>
+
+</div>
+
+</body>
+</html>
