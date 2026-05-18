@@ -14,12 +14,24 @@
     body {
       margin: 0;
       padding: 20px;
-      background: #f0f0f0;
+      background: #f0f0f0 !important;
       display: flex;
       justify-content: center;
       min-height: 100vh;
       box-sizing: border-box;
       font-size: 18px;
+      color-scheme: only light;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #f0f0f0 !important;
+        color: #1a1a1a !important;
+      }
+      .kw {
+        background: #fff !important;
+        color: #1a1a1a !important;
+      }
     }
 
     .kw {
@@ -261,7 +273,36 @@
       letter-spacing: 1px;
     }
 
-    .wa-icon { width: 16px; height: 16px; fill: #fff; flex-shrink: 0; }
+    .kw-marquee {
+      overflow: hidden;
+      background: #000000;
+      padding: 8px 0;
+      border-bottom: 1px solid #222;
+    }
+
+    .kw-marquee-inner {
+      display: flex;
+      white-space: nowrap;
+      animation: marquee 10s linear infinite;
+      gap: 0;
+    }
+
+    .kw-marquee-inner span {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #FFCD11;
+      padding: 0 24px;
+    }
+
+    @keyframes marquee {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    
   </style>
 </head>
 <body>
@@ -288,6 +329,15 @@
     <span class="badge" style="color:#999; border-color:#ccc;">120 c</span>
   </div>
 
+  <div class="kw-marquee">
+    <div class="kw-marquee-inner">
+      <span>⚡ INSCRIPCIÓN $139.900 — VÁLIDA HASTA EL 29/05</span>
+      <span>⚡ INSCRIPCIÓN $139.900 — VÁLIDA HASTA EL 29/05</span>
+      <span>⚡ INSCRIPCIÓN $139.900 — VÁLIDA HASTA EL 29/05</span>
+      <span>⚡ INSCRIPCIÓN $139.900 — VÁLIDA HASTA EL 29/05</span>
+    </div>
+  </div>
+
   <div class="kw-img">
     <img src="https://cbredes.s3.us-east-2.amazonaws.com/webred/_red/_renault25/images/kardian/VE3KARDIAN.jpeg" alt="Renault Kardian" />
   </div>
@@ -306,7 +356,7 @@
     <p class="sec-label yellow">Inscripción</p>
     <div class="row">
       <span class="lbl">Promoción — por tiempo limitado</span>
-      <span class="val promo-green">$174.900</span>
+      <span class="val promo-green">$139.900</span>
     </div>
     <div class="row">
       <span class="lbl">Precio normal</span>
